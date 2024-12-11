@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+    /* Colors */
+    --primary-color: #000000;  
+    --secondary-color: #ececea; 
+    --accent-color: #009b7d;   
+    
+
+    /* Font Settings */
+    --heading-font: 'Playfair Display', sans-serif;
+    --content-font: 'Montserrat', sans-serif;
+}
+
+@layer base {
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--heading-font);
+    }
+
+    a, p, span {
+        font-family: var(--content-font);
+    }
+
+    .nav-link {
+        font-family: var(--content-font);
+        @apply p-4;
+    }
+
+    .primary-color {
+        color: var(--primary-color);
+    }
+    .secondary-color {
+        color: var(--secondary-color);
+    }
+    .accent-color {
+        color: var(--accent-color);
+    }
+
+    .primary-bg {
+        background-color: var(--primary-color);
+    }
+    .secondary-bg {
+        background-color: var(--secondary-color);
+    }
+    .accent-bg {
+        background-color: var(--accent-color);
+    }
+
+    .pic-bg {
+        background-image: linear-gradient(to right, #1b4d31, #a7d7a2, #1b4d31);    
+    }
+
+    /* Transition effect for smooth menu show/hide */
+    #mobile-menu {
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        transform: translateY(-20px);  /* Start the menu offscreen */
+        opacity: 0;  /* Make it invisible initially */
+    }
+  
+    #mobile-menu:not(.hidden) {
+        transform: translateY(0);  /* Slide the menu into view */
+        opacity: 1;  /* Make it fully visible */
+    }
+  
+}

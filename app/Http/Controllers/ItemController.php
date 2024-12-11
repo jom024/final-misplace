@@ -30,6 +30,8 @@ class ItemController extends Controller
             'contact_number' => ['required']
         ]);
 
+        $attrs=['name'].=' Talamban';
+
         $item = Item::create(
             $attrs
         );
@@ -53,6 +55,8 @@ class ItemController extends Controller
             'student_id' => ['required'],
             'contact_number' => ['required']
         ]);
+
+        $attrs=['name'].=' Talamban';
 
         $item = Item::create(
             $attrs
